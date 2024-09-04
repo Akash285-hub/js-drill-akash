@@ -35,4 +35,16 @@ function problem3(){
   }
   return name;
 }
-module.exports={problem1,problem2,problem3}
+
+//    Write a function that accesses and logs the name and city of the individual at the index position 3 in the dataset.
+
+function problem4(index){
+  let access=[]
+  for(let i =0 ; i < person.length ; i++){
+      if(person[i].id===index ){
+          access.push(person[i].name ,person[i].city)
+      }
+  }
+  return access;
+}
+module.exports={problem1,problem2,problem3,problem4}
