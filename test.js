@@ -1,9 +1,10 @@
 const person=require('./person')
-//problem1 testcase
- const {problem1,problem2,problem3,problem4,problem5,problem6,problem7,problem8}=require('./solution')
-let newemails=problem1(person)
-console.log(newemails)
 
+ const {problem1,problem2,problem3,problem4,problem5,problem6,problem7,problem8}=require('./solution')
+
+ //problem1 testcase
+ let newemails=problem1(person)
+console.log(newemails)
 
 //problem2 testcase
 let newhobbies=problem2(30)

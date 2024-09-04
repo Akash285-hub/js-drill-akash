@@ -1,5 +1,3 @@
-
-
 const arrayOfObjects = [
     { 
        id: 1, 

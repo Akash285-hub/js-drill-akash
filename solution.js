@@ -1,5 +1,4 @@
- 
-  const person  = require('./person');
+ const person  = require('./person');
 
 // Given the dataset of individuals, write a function that accesses and returns the email addresses of all individuals.
 
@@ -14,12 +13,15 @@ function problem1(){
 // Implement a function that retrieves and prints the hobbies of individuals with a specific age, say 30 years old.
 
 function problem2(age){
+  
+
   let hobbies=[]
   for(let i =0 ; i < person.length ; i++){
       if(person[i].age===age){
           hobbies.push(person[i].hobbies)
       }
   }
+  
   return `Hobbies are: ${hobbies}\n`;
 }
 
@@ -27,6 +29,9 @@ function problem2(age){
 
 
 function problem3(){
+  if (typeof Country !== 'string') {    
+    return `Invalid country parameter\n`;
+  } 
   let name=[]
   for(let i =0 ; i < person.length ; i++){
       if(person[i].isStudent===true && person[i].country==='Australia'){
@@ -39,6 +44,10 @@ function problem3(){
 //    Write a function that accesses and logs the name and city of the individual at the index position 3 in the dataset.
 
 function problem4(index){
+  if (index === undefined || index === null) {
+    return `Enter the index is mandatory :.\n`;
+}
+let found = false
   let name=[]
   let city=[]
 
@@ -48,6 +57,10 @@ function problem4(index){
         city.push(person[i].city);  
       }
   }
+  if (!found) {
+    return `No index found\n`;
+}
+
   return `Name :${name}\nCity :${city}\n`
 
 }
@@ -74,6 +87,10 @@ function problem6(){
 // Write a function that accesses and prints the names and email addresses of individuals aged 25.
 
 function problem7(age){
+  if (age === undefined || age === null) {
+    return `Enter the age is mandatory : \n`;
+  }
+let found = false
  let  name=[];
  let email=[];
   for(let i=0 ; i< person.length ; i++){
@@ -82,14 +99,16 @@ function problem7(age){
     email.push(person[i].email);    
     }
   }
+  if (!found) {
+    return `No age found\n`;
+  }
   return `Name :${name}\nEmail :${email}\n`
 }
 
 // Implement a loop to access and log the city and country of each individual in the dataset.
 function problem8(){
-  city=[];
-  country=[];
-
+  let city=[];
+  let country=[];
   for(let i=0 ; i < person.length ; i++){
     city.push(person[i].city);
     country.push(person[i].country);
