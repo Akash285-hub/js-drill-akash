@@ -23,4 +23,16 @@ function problem2(age){
   return hobbies;
 }
 
-module.exports={problem1,problem2}
+// Create a function that extracts and displays the names of individuals who are students (`isStudent: true`) and live in Australia.
+
+
+function problem3(){
+  let name=[]
+  for(let i =0 ; i < person.length ; i++){
+      if(person[i].isStudent===true && person[i].country==='Australia'){
+          name.push(person[i].name)
+      }
+  }
+  return name;
+}
+module.exports={problem1,problem2,problem3}
