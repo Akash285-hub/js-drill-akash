@@ -1,6 +1,6 @@
 const person=require('./person')
 //problem1 testcase
- const {problem1,problem2,problem3,problem4,problem5,problem6,problem7}=require('./solution')
+ const {problem1,problem2,problem3,problem4,problem5,problem6,problem7,problem8}=require('./solution')
 let newemails=problem1(person)
 console.log(newemails)
 
@@ -29,3 +29,6 @@ console.log(firstage);
 let nameemail=problem7(25)
 console.log(nameemail);
 
+//problem8 testcase
+let cityountry=problem8();
+console.log(cityountry);

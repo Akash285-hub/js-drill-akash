@@ -8,7 +8,7 @@ function problem1(){
     for(let i=0 ; i < person.length ; i++){
         emails.push(person[i].email)
     }
-    return emails;
+    return `Emails are: ${emails}\n`;
 }
 
 // Implement a function that retrieves and prints the hobbies of individuals with a specific age, say 30 years old.
@@ -20,7 +20,7 @@ function problem2(age){
           hobbies.push(person[i].hobbies)
       }
   }
-  return hobbies;
+  return `Hobbies are: ${hobbies}\n`;
 }
 
 // Create a function that extracts and displays the names of individuals who are students (`isStudent: true`) and live in Australia.
@@ -33,19 +33,23 @@ function problem3(){
           name.push(person[i].name)
       }
   }
-  return name;
+  return `Name of the student is: ${name}\n`;
 }
 
 //    Write a function that accesses and logs the name and city of the individual at the index position 3 in the dataset.
 
 function problem4(index){
-  let access=[]
+  let name=[]
+  let city=[]
+
   for(let i =0 ; i < person.length ; i++){
       if(person[i].id===index ){
-          access.push(person[i].name ,person[i].city)
+        name.push(person[i].name);
+        city.push(person[i].city);  
       }
   }
-  return access;
+  return `Name :${name}\nCity :${city}\n`
+
 }
 
 // Implement a loop to access and print the ages of all individuals in the dataset.
@@ -54,7 +58,7 @@ function problem5(){
    for(let i=0  ; i<person.length ; i++){
       ages.push(person[i].age)
    }
-   return ages;
+   return `Ages are: ${ages}\n`;
 }
 
 // Create a function to retrieve and display the first hobby of each individual in the dataset.
@@ -64,21 +68,34 @@ function problem6(){
   for(let i=0; i<person.length ; i++){
     hobby.push(person[i].hobbies[0]);
   }
-  return hobby;
+  return `First hobbies are : ${hobby}\n`;
 }
 
 // Write a function that accesses and prints the names and email addresses of individuals aged 25.
 
 function problem7(age){
-  namemail=[];
+ let  name=[];
+ let email=[];
   for(let i=0 ; i< person.length ; i++){
     if(person[i].age==age){
-    namemail.push(person[i].name,person[i].email);    
+    name.push(person[i].name);
+    email.push(person[i].email);    
     }
   }
-  return namemail;
+  return `Name :${name}\nEmail :${email}\n`
 }
 
+// Implement a loop to access and log the city and country of each individual in the dataset.
+function problem8(){
+  city=[];
+  country=[];
 
+  for(let i=0 ; i < person.length ; i++){
+    city.push(person[i].city);
+    country.push(person[i].country);
+  
+  }
+   return `Cities are :${city}\nCountries are :${country}\n`
+  }
 
-module.exports={problem1,problem2,problem3,problem4,problem5,problem6,problem7}
+module.exports={problem1,problem2,problem3,problem4,problem5,problem6,problem7,problem8}
