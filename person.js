@@ -100,6 +100,7 @@ const arrayOfObjects = [
        isStudent: true
     }
   ];
+//Here I export the contents of this file
   module.exports= arrayOfObjects;
   
   
