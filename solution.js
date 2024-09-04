@@ -1,4 +1,5 @@
- const person  = require('./person');
+ //Here I Import the file person.js
+const person  = require('./person');
 
 // Given the dataset of individuals, write a function that accesses and returns the email addresses of all individuals.
 
