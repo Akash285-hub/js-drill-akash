@@ -66,4 +66,19 @@ function problem6(){
   }
   return hobby;
 }
-module.exports={problem1,problem2,problem3,problem4,problem5,problem6}
+
+// Write a function that accesses and prints the names and email addresses of individuals aged 25.
+
+function problem7(age){
+  namemail=[];
+  for(let i=0 ; i< person.length ; i++){
+    if(person[i].age==age){
+    namemail.push(person[i].name,person[i].email);    
+    }
+  }
+  return namemail;
+}
+
+
+
+module.exports={problem1,problem2,problem3,problem4,problem5,problem6,problem7}
